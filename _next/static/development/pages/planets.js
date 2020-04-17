@@ -711,7 +711,7 @@ if (typeof self !== 'undefined') {
 var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
 /* harmony default export */ __webpack_exports__["default"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../Desktop/starWars/node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../../Desktop/starWars/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../Desktop/starWars-app/node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../../Desktop/starWars-app/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
@@ -750,7 +750,7 @@ function symbolObservablePonyfill(root) {
 /*!**************************!*\
   !*** ./actions/index.js ***!
   \**************************/
-/*! exports provided: fetchPeople, selectPerson, fetchPlanets, selectPlanet, fetchStarships, selectStarship, getRandomPlanet */
+/*! exports provided: fetchPeople, selectPerson, fetchPlanets, selectPlanet, fetchStarships, selectStarship, getRandomPlanet, setBroken, setDefaultBroken, setBrokenRandomPlanet, setDefaultBrokenRandomPlanet */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -762,6 +762,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchStarships", function() { return fetchStarships; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectStarship", function() { return selectStarship; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomPlanet", function() { return getRandomPlanet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setBroken", function() { return setBroken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setDefaultBroken", function() { return setDefaultBroken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setBrokenRandomPlanet", function() { return setBrokenRandomPlanet; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setDefaultBrokenRandomPlanet", function() { return setDefaultBrokenRandomPlanet; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -773,7 +777,7 @@ var fetchPeople = function fetchPeople() {
         switch (_context.prev = _context.next) {
           case 0:
             _context.next = 2;
-            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch("https://swapi.co/api/people"));
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch("https://swapi.dev/api/people"));
 
           case 2:
             res = _context.sent;
@@ -809,7 +813,7 @@ var fetchPlanets = function fetchPlanets() {
         switch (_context2.prev = _context2.next) {
           case 0:
             _context2.next = 2;
-            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch("https://swapi.co/api/planets"));
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch("https://swapi.dev/api/planets"));
 
           case 2:
             res = _context2.sent;
@@ -845,7 +849,7 @@ var fetchStarships = function fetchStarships() {
         switch (_context3.prev = _context3.next) {
           case 0:
             _context3.next = 2;
-            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch("https://swapi.co/api/starships/"));
+            return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch("https://swapi.dev/api/starships/"));
 
           case 2:
             res = _context3.sent;
@@ -876,6 +880,26 @@ var selectStarship = function selectStarship(starshipName) {
 var getRandomPlanet = function getRandomPlanet() {
   return {
     type: 'RANDOM_PLANET'
+  };
+};
+var setBroken = function setBroken() {
+  return {
+    type: 'SET_BROKEN_IMG'
+  };
+};
+var setDefaultBroken = function setDefaultBroken() {
+  return {
+    type: 'SET_DEFAULT_BROKEN_IMG'
+  };
+};
+var setBrokenRandomPlanet = function setBrokenRandomPlanet() {
+  return {
+    type: 'SET_BROKEN_IMG_RANDOM'
+  };
+};
+var setDefaultBrokenRandomPlanet = function setDefaultBrokenRandomPlanet() {
+  return {
+    type: 'SET_DEFAULT_BROKEN_RANDOM_IMG'
   };
 };
 
@@ -947,7 +971,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _errorMessage_styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./errorMessage.styled */ "./components/errorMessage/errorMessage.styled.js");
 var _this = undefined,
-    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars/components/errorMessage/errorMessage.js";
+    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars-app/components/errorMessage/errorMessage.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1068,7 +1092,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mpth_react_no_ssr__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_mpth_react_no_ssr__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _header_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header.styled */ "./components/header/header.styled.js");
 var _this = undefined,
-    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars/components/header/header.js";
+    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars-app/components/header/header.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1351,8 +1375,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../people/peopleInfo/peopleInfo.styled */ "./components/people/peopleInfo/peopleInfo.styled.js");
 /* harmony import */ var _errorMessage_errorMessage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../errorMessage/errorMessage */ "./components/errorMessage/errorMessage.js");
 /* harmony import */ var _spinner_spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../spinner/spinner */ "./components/spinner/spinner.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../actions */ "./actions/index.js");
 var _this = undefined,
-    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars/components/planet/planetsInfo/planetsInfo.js";
+    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars-app/components/planet/planetsInfo/planetsInfo.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1362,113 +1387,119 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
+
 var PlanetsInfo = function PlanetsInfo(_ref) {
   var selectedPlanet = _ref.selectedPlanet,
-      isFetchingPlanet = _ref.isFetchingPlanet;
+      isFetchingPlanet = _ref.isFetchingPlanet,
+      broken = _ref.broken,
+      setBroken = _ref.setBroken;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      broken = _useState[0],
-      setBroken = _useState[1];
-
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetails"], {
+  // const [broken, setBroken] = useState(false)
+  var serverImage = __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetailsImg"], {
+    onError: function onError() {
+      return setBroken();
+    },
+    src: "https://starwars-visualguide.com/assets/img/planets/".concat(selectedPlanet.id, ".jpg"),
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16,
+      columnNumber: 5
+    }
+  });
+
+  var brokenImg = broken ? __jsx(_errorMessage_errorMessage__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19,
+      columnNumber: 30
+    }
+  }) : serverImage;
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetails"], {
+    __self: _this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
       columnNumber: 7
     }
   }, isFetchingPlanet ? __jsx(_spinner_spinner__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 24,
       columnNumber: 29
     }
-  }) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, selectedPlanet.name ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledName"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 19
-    }
-  }, selectedPlanet.name), broken ? __jsx(_errorMessage_errorMessage__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 30
-    }
-  }) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetailsImg"], {
-    onError: function onError() {
-      return setBroken(true);
-    },
-    src: "https://starwars-visualguide.com/assets/img/planets/".concat(selectedPlanet.id, ".jpg"),
+  }) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledName"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26,
-      columnNumber: 25
+      columnNumber: 13
     }
-  }), __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetailsList"], {
+  }, selectedPlanet.name), brokenImg, __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetailsList"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28,
-      columnNumber: 25
+      columnNumber: 13
     }
   }, __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29,
-      columnNumber: 27
+      columnNumber: 15
     }
   }, "Population:", selectedPlanet.population), __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30,
-      columnNumber: 27
+      columnNumber: 15
     }
   }, "Period: ", selectedPlanet.rotation_period), __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31,
-      columnNumber: 27
+      columnNumber: 15
     }
   }, "Orbital Period: ", selectedPlanet.orbital_period), __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32,
-      columnNumber: 27
+      columnNumber: 15
     }
   }, "Diameter: ", selectedPlanet.diameter), __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33,
-      columnNumber: 27
+      columnNumber: 15
     }
   }, "Climate: ", selectedPlanet.climate), __jsx(_people_peopleInfo_peopleInfo_styled__WEBPACK_IMPORTED_MODULE_3__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34,
-      columnNumber: 27
+      columnNumber: 15
     }
-  }, "Gravity: ", selectedPlanet.gravity)))) : null)));
+  }, "Gravity: ", selectedPlanet.gravity)))));
 };
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
     selectedPlanet: state.selectedPlanet,
-    isFetchingPlanet: state.isFetchingPlanet
+    isFetchingPlanet: state.isFetchingPlanet,
+    broken: state.broken
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {})(PlanetsInfo));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
+  setBroken: _actions__WEBPACK_IMPORTED_MODULE_6__["setBroken"]
+})(PlanetsInfo));
 
 /***/ }),
 
@@ -1490,7 +1521,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mpth_react_no_ssr__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_mpth_react_no_ssr__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _spinner_spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../spinner/spinner */ "./components/spinner/spinner.js");
 var _this = undefined,
-    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars/components/planet/planetsList/planetsList.js";
+    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars-app/components/planet/planetsList/planetsList.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1504,40 +1535,46 @@ var PlanetList = function PlanetList(_ref) {
   var fetchPlanets = _ref.fetchPlanets,
       selectPlanet = _ref.selectPlanet,
       planets = _ref.planets,
-      isFetchingPlanet = _ref.isFetchingPlanet;
+      isFetchingPlanet = _ref.isFetchingPlanet,
+      setDefaultBroken = _ref.setDefaultBroken;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     fetchPlanets();
   }, []);
+
+  var planetManipulations = function planetManipulations(el) {
+    selectPlanet(el.name), setDefaultBroken();
+  };
+
   return __jsx(_mpth_react_no_ssr__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15,
+      lineNumber: 20,
       columnNumber: 5
     }
   }, __jsx(_people_peopleList_peopleList_styled__WEBPACK_IMPORTED_MODULE_2__["StyledList"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16,
+      lineNumber: 21,
       columnNumber: 7
     }
   }, isFetchingPlanet ? __jsx(_spinner_spinner__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
+      lineNumber: 22,
       columnNumber: 29
     }
   }) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, planets.map(function (el) {
     return __jsx(_people_peopleList_peopleList_styled__WEBPACK_IMPORTED_MODULE_2__["StyledListItem"], {
       onClick: function onClick() {
-        return selectPlanet(el.name);
+        return planetManipulations(el);
       },
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 26,
         columnNumber: 17
       }
     }, el.name);
@@ -1553,7 +1590,8 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
   fetchPlanets: _actions__WEBPACK_IMPORTED_MODULE_3__["fetchPlanets"],
-  selectPlanet: _actions__WEBPACK_IMPORTED_MODULE_3__["selectPlanet"]
+  selectPlanet: _actions__WEBPACK_IMPORTED_MODULE_3__["selectPlanet"],
+  setDefaultBroken: _actions__WEBPACK_IMPORTED_MODULE_3__["setDefaultBroken"]
 })(PlanetList));
 
 /***/ }),
@@ -1577,7 +1615,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _errorMessage_errorMessage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../errorMessage/errorMessage */ "./components/errorMessage/errorMessage.js");
 /* harmony import */ var _spinner_spinner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../spinner/spinner */ "./components/spinner/spinner.js");
 var _this = undefined,
-    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars/components/randomPlanet/randomPlanet.js";
+    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars-app/components/randomPlanet/randomPlanet.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -1593,17 +1631,16 @@ var RandomPlanet = function RandomPlanet(_ref) {
       getRandomPlanet = _ref.getRandomPlanet,
       randomPlanet = _ref.randomPlanet,
       planets = _ref.planets,
-      isFetchingRandomPlanet = _ref.isFetchingRandomPlanet;
-
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
-      broken = _useState[0],
-      setBroken = _useState[1];
-
+      isFetchingRandomPlanet = _ref.isFetchingRandomPlanet,
+      brokenRandomPlanet = _ref.brokenRandomPlanet,
+      setBrokenRandomPlanet = _ref.setBrokenRandomPlanet,
+      setDefaultBrokenRandomPlanet = _ref.setDefaultBrokenRandomPlanet;
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     fetchPlanets();
   }, []);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     getRandomPlanet();
+    setDefaultBrokenRandomPlanet();
     var interval = setInterval(function () {
       getRandomPlanet();
     }, 2000);
@@ -1611,65 +1648,72 @@ var RandomPlanet = function RandomPlanet(_ref) {
       return clearInterval(interval);
     };
   }, [planets]);
+
+  var renderRandomPlanet = function renderRandomPlanet() {
+    var serverImage = __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsImg"], {
+      onError: function onError() {
+        return setBrokenRandomPlanet();
+      },
+      src: "https://starwars-visualguide.com/assets/img/planets/".concat(randomPlanet.id, ".jpg"),
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 28,
+        columnNumber: 7
+      }
+    });
+
+    return brokenRandomPlanet ? __jsx(_errorMessage_errorMessage__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      __self: _this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31,
+        columnNumber: 33
+      }
+    }) : serverImage;
+  };
+
   return __jsx(_mpth_react_no_ssr__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 35,
       columnNumber: 5
     }
-  }, __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetails"], {
+  }, __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetails"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 9
+      lineNumber: 36,
+      columnNumber: 7
     }
   }, isFetchingRandomPlanet ? __jsx(_spinner_spinner__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
-      columnNumber: 37
+      lineNumber: 37,
+      columnNumber: 35
     }
   }) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, randomPlanet ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledName"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
-      columnNumber: 19
+      lineNumber: 41,
+      columnNumber: 17
     }
-  }, randomPlanet.name), broken ? __jsx(_errorMessage_errorMessage__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, " ", randomPlanet.name), renderRandomPlanet(), __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsList"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
-      columnNumber: 30
-    }
-  }) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsImg"], {
-    onError: function onError() {
-      return setBroken(true);
-    },
-    src: "https://starwars-visualguide.com/assets/img/planets/".concat(randomPlanet.id, ".jpg"),
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38,
-      columnNumber: 25
-    }
-  }), __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsList"], {
-    __self: _this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40,
-      columnNumber: 25
+      lineNumber: 43,
+      columnNumber: 17
     }
   }, __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsWrapp"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
-      columnNumber: 27
+      lineNumber: 44,
+      columnNumber: 19
     }
   }, __jsx("div", {
     style: {
@@ -1678,72 +1722,75 @@ var RandomPlanet = function RandomPlanet(_ref) {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
-      columnNumber: 29
+      lineNumber: 45,
+      columnNumber: 21
     }
   }, __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43,
-      columnNumber: 31
+      lineNumber: 46,
+      columnNumber: 23
     }
   }, "Population:", randomPlanet.population), __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44,
-      columnNumber: 31
+      lineNumber: 47,
+      columnNumber: 23
     }
   }, "Period: ", randomPlanet.rotation_period), __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
-      columnNumber: 31
+      lineNumber: 48,
+      columnNumber: 23
     }
   }, "Orbital Period: ", randomPlanet.orbital_period)), __jsx("div", {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
-      columnNumber: 29
+      lineNumber: 50,
+      columnNumber: 21
     }
   }, __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
-      columnNumber: 31
+      lineNumber: 51,
+      columnNumber: 23
     }
   }, "Diameter:", randomPlanet.diameter), __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
-      columnNumber: 31
+      lineNumber: 52,
+      columnNumber: 23
     }
   }, "Climate:", randomPlanet.climate), __jsx(_randomPlanet_styled__WEBPACK_IMPORTED_MODULE_2__["StyledDetailsListItem"], {
     __self: _this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50,
-      columnNumber: 31
+      lineNumber: 53,
+      columnNumber: 23
     }
-  }, "Gravity:", randomPlanet.gravity)))))) : null))));
+  }, "Gravity:", randomPlanet.gravity))))) : null)));
 };
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
     planets: state.planets,
     randomPlanet: state.randomPlanet,
-    isFetchingRandomPlanet: state.isFetchingRandomPlanet
+    isFetchingRandomPlanet: state.isFetchingRandomPlanet,
+    brokenRandomPlanet: state.brokenRandomPlanet
   };
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, {
   fetchPlanets: _actions__WEBPACK_IMPORTED_MODULE_3__["fetchPlanets"],
-  getRandomPlanet: _actions__WEBPACK_IMPORTED_MODULE_3__["getRandomPlanet"]
+  getRandomPlanet: _actions__WEBPACK_IMPORTED_MODULE_3__["getRandomPlanet"],
+  setBrokenRandomPlanet: _actions__WEBPACK_IMPORTED_MODULE_3__["setBrokenRandomPlanet"],
+  setDefaultBrokenRandomPlanet: _actions__WEBPACK_IMPORTED_MODULE_3__["setDefaultBrokenRandomPlanet"]
 })(RandomPlanet));
 
 /***/ }),
@@ -1851,7 +1898,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _spinner_styled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./spinner.styled */ "./components/spinner/spinner.styled.js");
 var _this = undefined,
-    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars/components/spinner/spinner.js";
+    _jsxFileName = "/Users/ksuha2uha/Desktop/starWars-app/components/spinner/spinner.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3057,10 +3104,10 @@ var assign=Object.assign.bind(Object);function g(){return assign;}Object.defineP
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fplanets&absolutePagePath=%2FUsers%2Fksuha2uha%2FDesktop%2FstarWars%2Fpages%2Fplanets.js!./":
-/*!**********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fplanets&absolutePagePath=%2FUsers%2Fksuha2uha%2FDesktop%2FstarWars%2Fpages%2Fplanets.js ***!
-  \**********************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fplanets&absolutePagePath=%2FUsers%2Fksuha2uha%2FDesktop%2FstarWars-app%2Fpages%2Fplanets.js!./":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fplanets&absolutePagePath=%2FUsers%2Fksuha2uha%2FDesktop%2FstarWars-app%2Fpages%2Fplanets.js ***!
+  \**************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11369,7 +11416,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_styled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../app.styled */ "./app.styled.js");
 /* harmony import */ var _mpth_react_no_ssr__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mpth/react-no-ssr */ "./node_modules/@mpth/react-no-ssr/dist/index.js");
 /* harmony import */ var _mpth_react_no_ssr__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_mpth_react_no_ssr__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/Users/ksuha2uha/Desktop/starWars/pages/planets.js";
+var _jsxFileName = "/Users/ksuha2uha/Desktop/starWars-app/pages/planets.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -11436,14 +11483,14 @@ function Planets() {
 
 /***/ }),
 
-/***/ 1:
-/*!**************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fplanets&absolutePagePath=%2FUsers%2Fksuha2uha%2FDesktop%2FstarWars%2Fpages%2Fplanets.js ***!
-  \**************************************************************************************************************************************/
+/***/ 3:
+/*!******************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fplanets&absolutePagePath=%2FUsers%2Fksuha2uha%2FDesktop%2FstarWars-app%2Fpages%2Fplanets.js ***!
+  \******************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fplanets&absolutePagePath=%2FUsers%2Fksuha2uha%2FDesktop%2FstarWars%2Fpages%2Fplanets.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fplanets&absolutePagePath=%2FUsers%2Fksuha2uha%2FDesktop%2FstarWars%2Fpages%2Fplanets.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fplanets&absolutePagePath=%2FUsers%2Fksuha2uha%2FDesktop%2FstarWars-app%2Fpages%2Fplanets.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fplanets&absolutePagePath=%2FUsers%2Fksuha2uha%2FDesktop%2FstarWars-app%2Fpages%2Fplanets.js!./");
 
 
 /***/ }),
@@ -11459,5 +11506,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=planets.js.map

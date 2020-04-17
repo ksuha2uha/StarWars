@@ -711,7 +711,7 @@ if (typeof self !== 'undefined') {
 var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
 /* harmony default export */ __webpack_exports__["default"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../Desktop/starWars/node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../../Desktop/starWars/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../Desktop/starWars-app/node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../../../Desktop/starWars-app/node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
@@ -7040,7 +7040,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../store */ "./store.js");
 
-var _jsxFileName = "/Users/ksuha2uha/Desktop/starWars/pages/_app.js";
+var _jsxFileName = "/Users/ksuha2uha/Desktop/starWars-app/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
@@ -7099,7 +7099,9 @@ var initialState = {
   selectedStarship: {},
   isFetchingStarship: true,
   randomPlanet: {},
-  isFetchingRandomPlanet: true
+  isFetchingRandomPlanet: true,
+  broken: false,
+  brokenRandomPlanet: false
 };
 
 var reducer = function reducer() {
@@ -7134,7 +7136,7 @@ var reducer = function reducer() {
       });
       return _objectSpread({}, state, {
         planets: updatePlanets,
-        selectedPlanet: updatePlanets[0],
+        selectedPlanet: updatePlanets[1],
         isFetchingPlanet: false,
         isFetchingRandomPlanet: false
       });
@@ -7169,9 +7171,30 @@ var reducer = function reducer() {
     case 'RANDOM_PLANET':
       var randomID = Math.round(Math.random() * 10 + 1);
       var randomPlanet = state.planets[randomID];
-      console.log(randomPlanet);
       return _objectSpread({}, state, {
         randomPlanet: randomPlanet || state.planets[3]
+      });
+
+    case 'SET_BROKEN_IMG':
+      console.log('broken ');
+      return _objectSpread({}, state, {
+        broken: true
+      });
+
+    case 'SET_DEFAULT_BROKEN_IMG':
+      console.log('default ');
+      return _objectSpread({}, state, {
+        broken: false
+      });
+
+    case 'SET_BROKEN_IMG_RANDOM':
+      return _objectSpread({}, state, {
+        brokenRandomPlanet: true
+      });
+
+    case 'SET_DEFAULT_BROKEN_RANDOM_IMG':
+      return _objectSpread({}, state, {
+        brokenRandomPlanet: false
       });
 
     default:
@@ -7202,7 +7225,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers__WEBPACK_IMPORTED_MODULE_3__["default"], Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_logger__WEBPACK_IMPORTED_MODULE_1___default.a, redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"]));
+var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers__WEBPACK_IMPORTED_MODULE_3__["default"], Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 
 /***/ }),
@@ -7215,7 +7238,7 @@ var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./");
-module.exports = __webpack_require__(/*! /Users/ksuha2uha/Desktop/starWars/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
+module.exports = __webpack_require__(/*! /Users/ksuha2uha/Desktop/starWars-app/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
 
 
 /***/ }),
